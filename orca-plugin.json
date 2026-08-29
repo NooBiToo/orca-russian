@@ -1,9 +1,9 @@
 {
   "manifestVersion": 1,
   "id": "orca-russian",
-  "publisher": "NooBiToo",
+  "publisher": "noobitoo",
   "name": "Русский",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Russian translations for the Orca interface.",
   "repository": "https://github.com/NooBiToo/orca-russian",
   "engines": { "orca": ">=1.4.0" },
