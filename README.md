@@ -36,7 +36,7 @@ protected by Orca's plugin loader.
 2. Добавить источник (Git URL) — с явным `#ref`, как требует Orca:
 
    ```
-   https://github.com/NooBiToo/orca-russian#v1.0.3
+   https://github.com/NooBiToo/orca-russian#v1.0.4
    ```
 
 3. Установить плагин **Русский** и включить его.
