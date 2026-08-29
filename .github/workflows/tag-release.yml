@@ -1,0 +1,73 @@
+name: Release tag
+
+on:
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: "Ветка, от которой поставить тег"
+        required: true
+        default: "main"
+      tag:
+        description: "Имя тега (формат vX.Y.Z — Orca ставит плагин по тегу)"
+        required: true
+      notes:
+        description: "Заметки к релизу (необязательно)"
+        required: false
+
+permissions:
+  contents: write
+
+jobs:
+  tag:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Проверить формат тега
+        env:
+          TAG: ${{ inputs.tag }}
+        run: |
+          if ! [[ "$TAG" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+            echo "::error::Тег должен быть вида vX.Y.Z (semver), получено: '$TAG'"
+            exit 1
+          fi
+
+      - name: Checkout ветки
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.branch }}
+          fetch-depth: 0
+
+      - name: Сверить версию манифеста с тегом
+        env:
+          TAG: ${{ inputs.tag }}
+        run: |
+          VERSION="v$(python3 -c "import json; print(json.load(open('orca-plugin.json'))['version'])")"
+          if [ "$VERSION" != "$TAG" ]; then
+            echo "::error::orca-plugin.json version=$VERSION не совпадает с тегом $TAG. Поднимите version в манифесте и запушьте ветку."
+            exit 1
+          fi
+
+      - name: Создать и запушить тег
+        env:
+          TAG: ${{ inputs.tag }}
+          BRANCH: ${{ inputs.branch }}
+          NOTES: ${{ inputs.notes }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git rev-parse -q --verify "refs/tags/$TAG" >/dev/null; then
+            echo "::error::Тег $TAG уже существует"
+            exit 1
+          fi
+          BODY="${NOTES:-Релиз $TAG из ветки $BRANCH}"
+          git tag -a "$TAG" -m "$BODY" "$BRANCH"
+          git push origin "$TAG"
+
+      - name: Создать GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ inputs.tag }}
+          NOTES: ${{ inputs.notes }}
+        run: |
+          gh release create "$TAG" --verify-tag \
+            --title "$TAG" \
+            --notes "${NOTES:-Релиз $TAG}"
