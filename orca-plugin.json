@@ -1,0 +1,15 @@
+{
+  "manifestVersion": 1,
+  "id": "orca-russian",
+  "publisher": "your-github-id",
+  "name": "Русский",
+  "version": "0.1.0",
+  "description": "Russian translations for the Orca interface.",
+  "repository": "https://github.com/your-github-id/orca-russian",
+  "engines": { "orca": ">=1.4.0" },
+  "pluginApi": 1,
+  "contributes": {
+    "languagePacks": [{ "locale": "ru", "path": "locales/ru.json" }]
+  },
+  "capabilities": []
+}
