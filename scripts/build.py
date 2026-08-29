@@ -24,7 +24,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 EN_PATH = ROOT / "work" / "en.json"
-FLAT_PATH = ROOT / "translations" / "ru.flat.json"
+TRANSLATIONS_DIR = ROOT / "translations"
 OUT_PATH = ROOT / "locales" / "ru.json"
 
 MAX_ENTRIES = 20_000
@@ -41,7 +41,13 @@ warnings: list[str] = []
 
 def main() -> int:
     en = json.loads(EN_PATH.read_text(encoding="utf-8"))
-    flat = json.loads(FLAT_PATH.read_text(encoding="utf-8"))
+    flat: dict[str, str] = {}
+    for path in sorted(TRANSLATIONS_DIR.glob("*.json")):
+        part = json.loads(path.read_text(encoding="utf-8"))
+        for key, value in part.items():
+            if key in flat:
+                errors.append(f"дубликат ключа {key} в {path.name}")
+            flat[key] = value
 
     def lookup(node, dotted):
         cur = node
