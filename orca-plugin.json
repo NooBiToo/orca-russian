@@ -1,11 +1,11 @@
 {
   "manifestVersion": 1,
   "id": "orca-russian",
-  "publisher": "your-github-id",
+  "publisher": "NooBiToo",
   "name": "Русский",
   "version": "0.1.0",
   "description": "Russian translations for the Orca interface.",
-  "repository": "https://github.com/your-github-id/orca-russian",
+  "repository": "https://github.com/NooBiToo/orca-russian",
   "engines": { "orca": ">=1.4.0" },
   "pluginApi": 1,
   "contributes": {
