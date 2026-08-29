@@ -11,13 +11,15 @@ Agent Development Environment для работы с парком паралле
 
 **English:** Complete Russian UI translation for
 [Orca](https://github.com/stablyai/orca) (ADE for parallel AI coding agents),
-packaged as a language-pack plugin. 13 660 / 13 676 translatable strings —
+packaged as a language-pack plugin. 13 559 / 13 676 translatable strings —
 the only exceptions are inline-CSS animation entries and the strings
 protected by Orca's plugin loader.
 
 ## Возможности
 
-- **100 % переводимого каталога**: настройки, сайдбары, редактор, терминал,
+- **Переведено всё, что разрешено загрузчиком Orca** — 13 559 из 13 676 строк
+  (исключения: security-copy поверхности плагинов, защищённые загрузчиком, и
+  inline-CSS): настройки, сайдбары, редактор, терминал,
   браузер, GitHub/GitLab/Linear/Jira, дашборд агентов, скиллы, автоматизации,
   мобильный компаньон, трей, меню.
 - **Русские plural-формы** (1 агент / 2 агента / 5 агентов) добавлены ко всем
@@ -34,7 +36,7 @@ protected by Orca's plugin loader.
 2. Добавить источник (Git URL) — с явным `#ref`, как требует Orca:
 
    ```
-   https://github.com/NooBiToo/orca-russian#v1.0.1
+   https://github.com/NooBiToo/orca-russian#v1.0.2
    ```
 
 3. Установить плагин **Русский** и включить его.
