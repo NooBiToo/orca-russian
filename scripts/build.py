@@ -58,21 +58,41 @@ def main() -> int:
         return cur
 
     # 1. Ключи должны существовать в en.json; исключение — добавленные
-    #    plural-формы (_few/_many/...) к существующему в en семейству:
-    #    в русском четыре категории (one/few/many/other), в английском две.
+    #    plural-формы к существующему семейству (в русском четыре категории,
+    #    в английском две). Стиль суффиксов должен повторять семейство:
+    #    en встречает и x_one/x_other, и CamelCase xOne/xOther.
     PLURAL_SUFFIXES = ("zero", "one", "two", "few", "many", "other")
+    CAMEL = {"one": "One", "two": "Two", "few": "Few", "many": "Many",
+             "other": "Other", "zero": "Zero"}
+
+    def family_exists(base: str) -> bool:
+        return lookup(en, base) is not None or any(
+            lookup(en, f"{base}_{s}") is not None for s in PLURAL_SUFFIXES
+        ) or any(lookup(en, f"{base}{CAMEL[s]}") is not None for s in PLURAL_SUFFIXES)
+
     added_plurals = []
     unknown = []
-    for k in flat:
+    for k in list(flat):
         if lookup(en, k) is not None:
             continue
         base, sep, suffix = k.rpartition("_")
-        base_exists = sep and suffix in PLURAL_SUFFIXES and (
-            lookup(en, base) is not None
-            or any(lookup(en, f"{base}_{s}") is not None for s in PLURAL_SUFFIXES)
-        )
-        if base_exists:
-            added_plurals.append(k)
+        m = re.match(r"^(.+?)(One|Two|Few|Many|Other|Zero)$", k)
+        if sep and suffix in PLURAL_SUFFIXES and family_exists(base):
+            added_plurals.append(k)  # стиль как у семейства с _
+        elif m and family_exists(m.group(1)):
+            camel_family = any(
+                lookup(en, f"{m.group(1)}{CAMEL[s]}") is not None for s in PLURAL_SUFFIXES
+            )
+            if camel_family:
+                added_plurals.append(k)  # CamelCase-семейство — оставляем как есть
+            else:
+                nk = f"{m.group(1)}_{m.group(2).lower()}"
+                if nk in flat:
+                    errors.append(f"дубликат plural-ключа после нормализации: {k}")
+                else:
+                    warnings.append(f"нормализован plural-ключ: {k} -> {nk}")
+                    flat[nk] = flat.pop(k)
+                    added_plurals.append(nk)
         else:
             unknown.append(k)
     for k in unknown:

@@ -165,7 +165,6 @@
  "auto.components.right.sidebar.activityBar.error": "Ошибка",
  "auto.components.right.sidebar.aiVaultSessionLogOpen.alreadyEditable": "Лог уже открыт для редактирования.",
  "auto.components.right.sidebar.aiVaultSessionLogOpen.notAuthorized": "Не удалось открыть лог — путь не авторизован.",
- "auto.components.right.sidebar.aiVaultSessionLogOpen.workspaceGone": "Не удалось открыть лог — воркспейс больше недоступен.",
  "auto.components.right.sidebar.checks.panel.content.00e1c1658a": "Завершено",
  "auto.components.right.sidebar.checks.panel.content.02ca4f9074": "проходит",
  "auto.components.right.sidebar.checks.panel.content.03ca88f623": "Изменить",
@@ -587,5 +586,6 @@
  "auto.components.right.sidebar.useFileExplorerHandlers.32cd9fd991": "Не удалось открыть цель симлинка",
  "auto.components.right.sidebar.useFileExplorerImport.132fd0e1e9": "Не удалось импортировать {{value1}} ({{value0}}).",
  "auto.components.right.sidebar.useFileExplorerImport.25919b2050": "Пропущено {{value1}} ({{value0}}).",
- "auto.components.right.sidebar.useFileExplorerKeys.8adb953095": "Не удалось выполнить операцию"
+ "auto.components.right.sidebar.useFileExplorerKeys.8adb953095": "Не удалось выполнить операцию",
+ "auto.components.right.sidebar.aiVaultSessionLogOpen.workspaceGone": "Не удалось открыть лог — воркспейс больше недоступен."
 }
