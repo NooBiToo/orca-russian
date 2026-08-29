@@ -433,6 +433,5 @@
  "auto.components.skills.SkillUpdateResultRows.stillOutdated": "После запуска обновления скилл всё ещё устарел.",
  "auto.components.skills.SkillUpdateRow.oneLocation": "1 место",
  "auto.components.skills.SkillUpdateRow.manyLocations": "{{value0}} мест",
- "auto.components.skills.SkillUpdateRow.fewLocations": "{{value0}} места",
  "auto.components.skills.SkillsList.listLabel": "Скиллы"
 }
