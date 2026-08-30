@@ -281,7 +281,6 @@
  "auto.i18n.hostedReview.copy.b3d7e0f1a8": "merge request",
  "auto.i18n.hostedReview.copy.a2c6d9e0f7": "Merge Request",
  "auto.i18n.hostedReview.copy.91b5c8d7e6": "GitLab",
- "auto.lib.activateAiVaultStructuredSession.unavailable": "Структурированная сессия агента пока недоступна. Повторите через некоторое время.",
  "auto.lib.agent.catalog.5dff448636": "OpenClaw",
  "auto.lib.agent.catalog.8a9ba743cc": "Hermes",
  "auto.lib.agent.catalog.4e63c7b956": "Rovo Dev",
