@@ -105,7 +105,7 @@
  "auto.components.artifacts.artifact-publish-flow.2fc727c831": "Артефакт обновлён",
  "auto.components.artifacts.artifact-publish-flow.5cb4f5ec36": "Копировать ссылку",
  "auto.components.artifacts.artifact-publish-flow.fbb5018602": "Этот файл пуст.",
- "auto.components.artifacts.artifact-publish-flow.6112db5a1c": "Артефакты, публикуемые из Orca, должны быть меньше 800 КБ.",
+ "auto.components.artifacts.artifact-publish-flow.6112db5a1c": "Этот артефакт слишком велик, чтобы поделиться им.",
  "auto.components.artifacts.artifact-publish-flow.e2ed5acd8c": "Orca не удалось прочитать этот файл. Откройте его из воркспейса и повторите попытку.",
  "auto.components.artifacts.artifact-publish-flow.6d475e9b25": "Публиковать как артефакты можно только локальные файлы HTML и Markdown.",
  "auto.components.artifacts.artifact-publish-flow.29a406be09": "Артефакты должны содержать текст.",

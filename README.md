@@ -1,7 +1,7 @@
 # orca-russian · Русский язык-пак для Orca
 
 ![Version](https://img.shields.io/github/v/tag/NooBiToo/orca-russian?label=%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%8F)
-![Coverage](https://img.shields.io/badge/%D0%BF%D0%B5%D1%80%D0%B5%D0%B2%D0%BE%D0%B4-13%20660%2F13%20676-brightgreen)
+![Coverage](https://img.shields.io/badge/%D0%BF%D0%B5%D1%80%D0%B5%D0%B2%D0%BE%D0%B4-13%20559%2F13%20744-brightgreen)
 ![Orca](https://img.shields.io/badge/Orca-%3E%3D1.4.0-blue)
 ![Plugin API](https://img.shields.io/badge/pluginApi-1-informational)
 
@@ -11,13 +11,13 @@ Agent Development Environment для работы с парком паралле
 
 **English:** Complete Russian UI translation for
 [Orca](https://github.com/stablyai/orca) (ADE for parallel AI coding agents),
-packaged as a language-pack plugin. 13 559 / 13 676 translatable strings —
+packaged as a language-pack plugin. 13 559 / 13 744 translatable strings —
 the only exceptions are inline-CSS animation entries and the strings
 protected by Orca's plugin loader.
 
 ## Возможности
 
-- **Переведено всё, что разрешено загрузчиком Orca** — 13 559 из 13 676 строк
+- **Переведено всё, что разрешено загрузчиком Orca** — 13 559 из 13 744 строк
   (исключения: security-copy поверхности плагинов, защищённые загрузчиком, и
   inline-CSS): настройки, сайдбары, редактор, терминал,
   браузер, GitHub/GitLab/Linear/Jira, дашборд агентов, скиллы, автоматизации,

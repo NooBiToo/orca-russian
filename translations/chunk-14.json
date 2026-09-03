@@ -355,7 +355,7 @@
  "auto.components.settings.ExperimentalPane.0e89a574ae": "Плавающий анимированный питомец в правом нижнем углу.",
  "auto.components.settings.ExperimentalPane.nativeChat.title": "Чат-интерфейс",
  "auto.components.settings.ExperimentalPane.nativeChat.description": "Предпросмотр чат-интерфейса десктопа для поддерживаемых терминальных сессий агентов.",
- "auto.components.settings.ExperimentalPane.nativeChat.copy": "Добавляет просмотр Chat UI, доступный из панелей терминалов поддерживаемых агентов. Экспериментально: настраиваем точность расшифровки, стриминг и паритет с терминалом.",
+ "auto.components.settings.ExperimentalPane.nativeChat.copy": "Включает экспериментальный Chat UI для вновь создаваемых поддерживаемых локальных сессий. Существующие терминальные сессии продолжают работать через терминальный чат, пока мы настраиваем точность расшифровки, стриминг и паритет.",
  "auto.components.settings.ExperimentalPane.nativeChat.toggleLabel": "Переключить чат-интерфейс",
  "auto.components.settings.ExperimentalPane.nativeChat.defaultTitle": "Вид по умолчанию",
  "auto.components.settings.ExperimentalPane.nativeChat.defaultCopy": "Выберите, как открываются новые поддерживаемые вкладки терминалов агентов.",
