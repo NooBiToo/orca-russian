@@ -383,8 +383,6 @@
  "auto.components.editor.CombinedDiffViewer.7e7ca60816": "изменённых файлов",
  "auto.components.editor.CombinedDiffViewer.b6c3b84476": "Показать дерево файлов",
  "auto.components.editor.CombinedDiffViewer.39f8007549": "Разбор конфликтов",
- "auto.components.editor.CombinedDiffViewer.39e73e7181": "исключены из этого просмотра диффа.",
- "auto.components.editor.CombinedDiffViewer.689b99f8ad": "неразрешённый конфликт",
  "auto.components.editor.CombinedDiffViewer.820ec01f24": "Файлы с конфликтами разбираются отдельно",
  "auto.components.editor.CombinedDiffViewer.fd8892b120": "Нет изменений для отображения",
  "auto.components.editor.CombinedDiffViewer.eb5f40e49c": "Этот просмотр диффа исключает неразрешённые конфликты, потому что обычный двухсторонний механизм диффов не обеспечивает безопасность при конфликтах.",

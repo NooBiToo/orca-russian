@@ -3,12 +3,17 @@
 
 Каждый чанк — translations-независимый файл chunks/chunk-NN.json вида
 {flat_key: english_value}. Агенты кладут переводы в translations/chunk-NN.json
-(то же базовое имя). Защищённое пространство auto.components.settings.plugin*
-и CSS-строки пропускаются. Уже переведённое не попадает в чанки.
+(то же базовое имя). Защищённое пространство auto.components.settings.plugin* (кроме белого
+списка translatable plugin chrome из plugin_chrome.py) и CSS-строки
+пропускаются. Уже переведённое не попадает в чанки.
 """
 
 import json
+import sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from plugin_chrome import protected_translation
 
 ROOT = Path(__file__).resolve().parents[1]
 EN = json.loads((ROOT / "work" / "en.json").read_text(encoding="utf-8"))
@@ -24,14 +29,6 @@ SKIP_KEYS = {
     "auto.components.feature.wall.review.animated.visual.pr.view.styles.fc9a23c83d",
     "auto.components.feature.wall.review.animated.visual.ship.styles.90cdcd2ecc",
 }
-
-PROTECTED_ROOT = "auto.components.settings."
-
-
-def protected(path: str) -> bool:
-    if not path.startswith(PROTECTED_ROOT):
-        return False
-    return path[len(PROTECTED_ROOT):].split(".", 1)[0].startswith("plugin")
 
 
 def flatten(node, path=""):
@@ -52,7 +49,7 @@ for path in (ROOT / "translations").glob("*.json"):
 todo = [
     (k, v)
     for k, v in flatten(EN)
-    if k not in already and k not in SKIP_KEYS and not protected(k)
+    if k not in already and k not in SKIP_KEYS and not protected_translation(k)
 ]
 
 # группировка: сегмент пути (первые 3 сегмента для auto.components.X)

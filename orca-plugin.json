@@ -3,7 +3,7 @@
   "id": "russian",
   "publisher": "noobitoo",
   "name": "Русский",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Russian translations for the Orca interface.",
   "repository": "https://github.com/NooBiToo/orca-russian",
   "engines": { "orca": ">=1.4.0" },
