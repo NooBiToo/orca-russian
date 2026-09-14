@@ -261,7 +261,7 @@
  "auto.components.settings.RemoteServerUpdateStatus.restarting": "Перезапуск…",
  "auto.components.settings.RemoteServerUpdateStatus.updated": "Обновлено",
  "auto.components.settings.RemoteServerUpdateStatus.failed": "Не удалось обновить",
- "auto.components.settings.RemoteServerUpdateStatus.serviceManagerHelp": "Обновляйте Orca через менеджер служб, который запускает этот сервер.",
+ "auto.components.settings.RemoteServerUpdateStatus.serviceManagerHelp": "Обновляйте Orca на хосте сервера — через системный менеджер пакетов, если Orca установлен из .deb или .rpm, иначе через менеджер служб, которым он запускается.",
  "auto.components.settings.RemoteServerUpdateStatus.unpackedHelp": "Сборки для разработки нужно обновлять из их каталога с исходниками.",
  "auto.components.settings.RemoteServerUpdateStatus.legacyHelp": "Обновите этот сервер вручную один раз, чтобы включить удалённые обновления.",
  "auto.components.settings.RepositoryForkSyncSection.defaultBranch": "ветка по умолчанию",

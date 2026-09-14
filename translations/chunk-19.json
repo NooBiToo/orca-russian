@@ -347,7 +347,7 @@
  "auto.components.settings.accounts.search.b84a5b0c8a": "Выберите, где проверять и добавлять аккаунты провайдеров: на этом устройстве или в WSL.",
  "auto.components.settings.accounts.search.d09fb5ca92": "Расположение аккаунтов",
  "auto.components.settings.accounts.search.733f9e2a93": "Расход MiniMax",
- "auto.components.settings.accounts.search.f8374c3151": "Вставьте cookie сессии platform.minimax.io для локального получения лимитов запросов.",
+ "auto.components.settings.accounts.search.f8374c3151": "настройка учёта расхода MiniMax: выберите зарубежный или китайский эндпоинт, затем вставьте cookie сессии или сохраните API-ключ, подходящий для любого из хостов",
  "auto.components.settings.accounts.search.f4a8c2e1b7": "Расход Grok (xAI)",
  "auto.components.settings.accounts.search.e3b7d1f9a2": "Вход через OAuth в Grok CLI (grok login) для просмотра недельного расхода кредитов.",
  "auto.components.settings.accounts.search.d2c6a0e8f1": "grok",

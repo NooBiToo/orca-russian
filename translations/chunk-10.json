@@ -252,7 +252,7 @@
  "auto.components.new.workspace.SmartWorkspaceNameField.emoji": "Эмодзи",
  "auto.components.new.workspace.SmartWorkspaceNameField.loadingLinearIssue": "Загрузка ишью Linear…",
  "auto.components.new.workspace.ProjectCombobox.empty": "Нет проектов, соответствующих вашему поиску.",
- "auto.components.new.workspace.ProjectCombobox.addProject": "Добавить новый проект",
+ "auto.components.new.workspace.ProjectCombobox.addProject": "Добавить проект",
  "auto.components.new.workspace.ProjectCombobox.label": "Проект",
  "auto.components.new.workspace.ProjectCombobox.browse": "Обзор проектов",
  "auto.components.new.workspace.ProjectCombobox.listLabel": "Проекты",
