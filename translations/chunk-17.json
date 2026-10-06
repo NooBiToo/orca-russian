@@ -85,7 +85,6 @@
  "auto.components.settings.RepositoryHooksSection.da37d6f10e": "Копировать",
  "auto.components.settings.RepositoryHooksSection.3149964b66": "Скопировано",
  "auto.components.settings.RepositoryHooksSection.waitForSetupBeforeAgent": "Дождаться завершения настройки перед запуском агента",
- "auto.components.settings.RepositoryHooksSection.waitForSetupBeforeAgentHelp": "Включите, если настройка устанавливает зависимости, MCP-серверы или файлы конфигурации, которые нужны агенту при запуске.",
  "auto.components.settings.RepositoryIconPicker.2b7d27b93c": "Использовать цвет репозитория {{value0}}",
  "auto.components.settings.RepositoryIconPicker.fde066a63b": "Загружаемый PNG должен быть не больше 256KB.",
  "auto.components.settings.RepositoryIconPicker.cc1286e263": "Favicon",

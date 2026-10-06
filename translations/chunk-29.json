@@ -345,7 +345,7 @@
  "auto.components.status.bar.UsageRosterPanel.detailed": "Подробно",
  "auto.components.status.bar.UsageRosterPanel.compact": "Компактно",
  "auto.components.status.bar.UsageRosterPanel.detailedTooltip": "Полный расход с полосами, подписями и процентами",
- "auto.components.status.bar.UsageRosterPanel.compactTooltip": "Сжатый расход: только самое жёсткое окно",
+ "auto.components.status.bar.UsageRosterPanel.compactTooltip": "Сжатый расход: одна сводка на провайдера",
  "auto.components.status.bar.UsageRosterPanel.footerDetailAria": "Детали нижней панели расхода",
  "auto.components.status.bar.RemoteServerUpdateStatusSegment.updating": "Обновление {{value0}}/{{value1}}",
  "auto.components.status.bar.RemoteServerUpdateStatusSegment.updatingTooltip": "Идёт обновление удалённых серверов Orca",
